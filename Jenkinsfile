@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        nodejs 'Nodejs'  // Jenkins에서 설정한 Nodejs 도구의 이름을 지정
+    }
     stages {
         stage('Build') { 
             steps {
