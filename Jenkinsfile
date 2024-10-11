@@ -3,13 +3,14 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                ls
-                npm run build
+                sh 'pwd'
+                sh 'ls'
+                sh 'npm run build'
             }
         }
         stage('Deliver') {
             steps {
-                npm run start
+                sh 'npm run start'
             }
         }
     }
